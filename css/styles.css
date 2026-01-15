@@ -1,0 +1,153 @@
+/* General Styles */
+:root {
+    --bg-color: #f9e5fa;    
+    --text-color: #4a4a4a;
+    --todo-color: #d1e9ff;
+    --progress-color: #fff4d1;
+    --done-color: #d1f2d1;
+    --card-bg: #ffffff;
+    --accent-color: #f27dff;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    /* Applying gradient */
+    background: #abffe2; 
+    background: linear-gradient(180deg,rgba(249, 229, 250, 1) 50%, rgba(163, 182, 255, 1) 100%);
+    background-attachment: fixed; /* Keeps the gradient still while scrolling */
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-weight: 600;
+    color: var(--accent-color);
+   
+}
+
+/* Input Area */
+.add-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#taskInput {
+    padding: 12px 20px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    border-color: var(--accent-color);
+}
+
+.main-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.main-button:hover {
+    background-color: #e730fc;
+    transform: translateY(-2px);
+}
+
+/* Kanban Board Layout */
+.kanban-board {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.column {
+    background-color: #fff;
+    backdrop-filter: blur(5px); /* Soft blur effect */
+    border-radius: 20px;
+    width: 300px;
+    min-height: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.column-header {
+    padding: 15px;
+    text-align: center;    
+}
+
+.todo .column-header { background-color: var(--todo-color); }
+.in-progress .column-header { background-color: var(--progress-color); }
+.done .column-header { background-color: var(--done-color); }
+
+.task-list {
+    padding: 15px;
+    flex-grow: 1;
+    transition: background-color 0.3s;
+}
+
+/* Dragging effect on columns */
+.drag-over {
+    background-color: rgba(125, 138, 255, 0.1);
+}
+
+/* Individual Task Cards */
+.single-task {
+    background-color: var(--card-bg);
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.single-task:active {
+    cursor: grabbing;
+}
+
+.single-task.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+.single-task p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.close-btn {
+    color: #ffb3b3;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.2s;
+    padding: 0 5px;
+}
+
+.close-btn:hover {
+    color: #ff5c5c;
+}

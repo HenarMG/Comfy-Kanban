@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Comfy Kanban - Task Watcher</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<header>
+			<h1>My Tasks</h1>
+			<div class="add-container">
+				<input type="text" id="taskInput" placeholder="Write a new task here">
+				<button id="addBtn" class="main-button">Add Task</button>
+			</div>
+		</header>
+
+		<main class="kanban-board">
+			<!-- To Do Column -->
+        	<section class="column todo" id="todo">
+            	<div class="column-header">
+                	<h4>To Do</h4>
+            	</div>
+            	<div class="task-list">
+            	</div>
+        	</section>
+
+			<!-- In Progress Column -->
+	        <section class="column in-progress" id="in-progress">
+    	        <div class="column-header">
+        	        <h4>In Progress</h4>
+            	</div>
+	            <div class="task-list">
+    	        </div>
+        	</section>
+		
+	        <!-- Done Column -->
+    	    <section class="column done" id="done">
+        	    <div class="column-header">
+            	    <h4>Done</h4>
+	            </div>
+    	        <div class="task-list">
+        	    </div>
+        	</section>
+		</main>
+		
+		
+		<script src="js/functions.js"></script>
+	</body>
+</html>
