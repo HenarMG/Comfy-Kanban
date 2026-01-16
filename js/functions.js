@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addBtn = document.getElementById('addBtn');
     const taskInput = document.getElementById('taskInput');
     const columns = document.querySelectorAll('.column');
+    
 
     // Add task on button click
     addBtn.addEventListener('click', createTask);
@@ -38,6 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial placeholder task
     createTask("Try dragging me!");
 });
+
+//Change styles css
+const lovelyIcon = document.getElementById('lovely-style');
+const sunsetIcon = document.getElementById('sunset-style');
+const nightIcon = document.getElementById('night-style');
+const plantIcon = document.getElementById('plant-style');
+
+// Add events to elements 
+lovelyIcon.addEventListener('click', () => changeStyle('lovely'));
+sunsetIcon.addEventListener('click', () => changeStyle('sunset'));
+nightIcon.addEventListener('click', () => changeStyle('night'));
+plantIcon.addEventListener('click', () => changeStyle('plant'));
 
 let draggedElement = null;
 
@@ -83,6 +96,33 @@ function createTask(text) {
     input.value = "";
     input.focus();
 }
+
+
+
+
+// Función para cambiar estilos
+function changeStyle(chosenStyle) {
+  const body = document.body;
+  // Puedes limpiar estilos previos o agregar clases
+  body.className = ''; // Limpia clases previas
+  // Asignar diferentes clases o estilos
+  switch(chosenStyle) {
+    case 'lovely':
+      body.classList.add('lovely-style');
+      break;
+    case 'sunset':
+      body.classList.add('sunset-style');
+      break;
+    case 'night':
+      body.classList.add('night-style');
+      break;
+    case 'plant':
+      body.classList.add('plant-style');
+      break;
+  }
+}
+
+
 		
 		/*
 		DRAGOVER
