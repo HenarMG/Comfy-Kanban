@@ -85,18 +85,38 @@ nav {
     padding: 0px 10px;
     margin-bottom: 0.5em;
     opacity: 0.8;
+    position: relative; /*nuevo*/
 }
 
 nav span {
-    display: flex; /* Makes the content inside the span horizontal */
+    display: flex; 
     align-items: center;
-    gap: 1em; /* Space between the links/icons */
+    gap: 1em; 
 }
+
+.nav-left {
+    flex: 0 0 auto;
+}
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center; 
+    gap: 1em; 
+}
+
+.nav-right {
+    flex: 0 0 auto; 
+}
+
 
 nav a {
     text-decoration: none;
     color: var(--text-color);
-    display: flex;
+    display: flex;   
     align-items: center;
     gap: 8px;
     transition: opacity 0.2s;
@@ -112,6 +132,8 @@ nav img {
     border-radius: 4px;
 }
 
+
+/* BODY */
 h1 {
     font-weight: 600;
     color: var(--accent-color);   
@@ -225,6 +247,15 @@ h1 {
     font-size: 14px;
 }
 
+.single-task p.editable {
+    background-color: white;
+    outline: 2px solid var(--accent-color);
+    border-radius: 4px;
+    padding: 2px 5px;
+    cursor: text;
+    min-width: 50px;
+}
+
 .close-btn {
     color: #ffb3b3;
     cursor: pointer;
@@ -237,3 +268,4 @@ h1 {
 .close-btn:hover {
     color: #ff5c5c;
 }
+

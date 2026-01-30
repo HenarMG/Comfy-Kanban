@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    updateClockNav();                   
+    setInterval(updateClockNav, 1000); 
+
     const addBtn = document.getElementById('addBtn');
     const taskInput = document.getElementById('taskInput');
     const columns = document.querySelectorAll('.column');
@@ -69,6 +72,35 @@ function createTask(text) {
     const taskContent = document.createElement('p');
     taskContent.textContent = taskValue || "New Task";
 
+    
+    // Edit Task
+    taskContent.addEventListener('dblclick', () => {
+        taskContent.contentEditable = true; 
+        taskContent.focus(); 
+        taskContent.classList.add('editable'); 
+        
+        taskDiv.setAttribute("draggable", "false"); 
+    });
+
+    taskContent.addEventListener('blur', () => {
+        taskContent.contentEditable = false;
+        taskContent.classList.remove('editable');
+        taskDiv.setAttribute("draggable", "true"); 
+
+        if (taskContent.textContent.trim() === "") {
+             taskDiv.remove(); 
+             // taskContent.textContent = "Empty Task"; // Default text when empty
+        }
+    });
+
+    taskContent.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault(); 
+            taskContent.blur(); 
+        }
+    });
+
+    
     // Delete button
     const deleteBtn = document.createElement('span');
     deleteBtn.className = "close-btn";
@@ -98,8 +130,6 @@ function createTask(text) {
 }
 
 
-
-
 // Función para cambiar estilos
 function changeStyle(chosenStyle) {
   const body = document.body;
@@ -122,6 +152,19 @@ function changeStyle(chosenStyle) {
   }
 }
 
+function updateClockNav() {
+  const now = new Date();
+  const optionsDate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const optionsHour = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+
+  const date = now.toLocaleDateString('en-EN', optionsDate);
+  const hour = now.toLocaleTimeString('en-EN', optionsHour);
+
+  const clockNav = document.getElementById('nav-clock');
+  if (!clockNav) return;
+
+  clockNav.textContent = `${date} - ${hour}`;
+}
 
 		
 		/*
