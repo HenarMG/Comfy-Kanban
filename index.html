@@ -4,8 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Comfy Kanban - Task Watcher</title>
 		<link rel="stylesheet" href="css/styles.css">
-		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-		 
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet"> 
 	</head>
 
 	<body>
@@ -15,13 +14,50 @@
 					<a><span class="nav-left" id="nav-clock"></span></a> <!-- hour/date/location -->
 				</span>
 				<span class="nav-center">
-					<a><img id="lovely-style" src="images/icon_favorite_Google.png" alt="Change to Lovely Style"></a>
-					<a><img id="sunset-style" src="images/icon_wb_twilight_Google.png" alt="Change to Sunset Style"></a>
-					<a><img id="night-style" src="images/icon_partly_cloudy_night_Google.png" alt="Change to Night Style"></a>
-					<a><img id="plant-style" src="images/icon_grass_Google.png" alt="Change to Plant Style"></a>
+					<a id="lovely-style">
+						<svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" 
+						alt="Change to Lovely Style" fill="#currentColor" class="class-icon">
+						<path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 
+						99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 
+						52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 
+						26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 
+						107T480-228Zm0-273Z"/></svg>
+						<!--<img id="lovely-style" src="images/icon_favorite_Google.png" alt="Change to Lovely Style">
+					-->
+					</a>
+					<a id="sunset-style" alt="Change to Sunset Style">
+						<svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" 
+						fill="#1f1f1f" class="class-icon">
+						<path d="m734-556-56-58 86-84 56 56-86 86ZM80-160v-80h800v80H80Zm360-520v-120h80v120h-80ZM226-558l-84-86 
+						56-56 86 86-58 56Zm71 158h366q-23-54-72-87t-111-33q-62 0-111 33t-72 87Zm-97 80q0-117 81.5-198.5T480-600q117 0 198.5 81.5T760-320H200Zm280-80Z"/></svg>
+						<!--<img id="sunset-style" src="images/icon_wb_twilight_Google.png" alt="Change to Sunset Style">
+					-->
+					</a>
+					<a id="night-style" src="images/icon_partly_cloudy_night_Google.png" alt="Change to Night Style">
+						<svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" 
+						fill="#1f1f1f" class="class-icon"><path d="M504-465Zm20 385H420l20-12.5q20-12.5 43.5-28t43.5-28l20-12.5q81-6 149.5-49T805-325q-86-8-163-43.5T504-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T200-484v12l-12 5.5q-12 5.5-26.5 
+						11.5T135-443.5l-12 5.5q-2-11-2.5-23t-.5-23q0-146 93-257.5T450-880q-18 99 11 193.5T561-521q71 71 165.5 
+						100T920-410q-26 144-138 237T524-80Zm-284-80h180q25 0 42.5-17.5T480-220q0-25-17-42.5T422-280h-52l-20-48q-14-33-44-52.5T240-400q-50 0-85 34.5T120-280q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T40-280q0-83 
+						58.5-141.5T240-480q60 0 109.5 32.5T423-360q57 2 97 42.5t40 97.5q0 58-41 99t-99 41H240Z"/></svg>
+						<!--<img id="night-style" src="images/icon_partly_cloudy_night_Google.png" alt="Change to Night Style">
+					-->
+					</a>
+					<a id="plant-style" src="images/icon_grass_Google.png" alt="Change to Plant Style">
+						<svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" 
+						fill="#1f1f1f" class="class-icon"><path d="M80-160v-80h230q-22-85-83.5-146.5T80-470q20-5 39.5-7.5T160-480q134 0 
+						227 93t93 227H80Zm480 0q0-42-9-83.5T525-323q42-71 114.5-114T800-480q21 0 40.5 2.5T880-470q-85 
+						22-146 83.5T650-240h230v80H560Zm-80-239q0-65 24-122t66-100.5q42-43.5 98.5-69.5T789-719q-56 35-98 
+						86t-65 114q-44 21-80.5 51.5T480-399Zm-73-75q-12-9-24-17t-25-16q0-6 1-12.5t1-12.5q0-76-24-144t-68-124q66 
+						27 114.5 77.5T457-606q-18 30-31 63.5T407-474Z"/></svg>
+						<!--<img id="plant-style" src="images/icon_grass_Google.png" alt="Change to Plant Style">
+					-->
+					</a>
 				</span>
 				<span class="nav-right">
-					<a href="https://github.com/HenarMG">
+					<a>
+						<svg class="class-icon" xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#1f1f1f"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+					</a>
+					<a href="https://github.com/HenarMG" target="_blank">
 						<!-- <img src="images/Icon_GitHub_Invertocat_Black.svg"  
 						fill="currentColor" class="class-icon" alt="Logo GitHub"> -->
 						<svg width="98" height="96" viewBox="0 0 98 96" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +86,9 @@
 							</defs>
 						</svg>
 					</a>
-					<a href="https://linkedin.com/in/henar-montilla-garcía"><img src="images/Logo_LinkedIn.png" alt="Logo LinkedIn"></a>					
+					<a href="https://linkedin.com/in/henar-montilla-garcía" target="_blank">
+						<img src="images/Logo_LinkedIn.png" alt="Logo LinkedIn">
+					</a>					
 				</span>
 			</nav>
 			<h1>My Tasks</h1>

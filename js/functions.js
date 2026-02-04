@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initial placeholder task
-    createTask("Try dragging me!");
+    createTask("Try dragging me! Or Double click!!");
 });
 
 //Change styles css
