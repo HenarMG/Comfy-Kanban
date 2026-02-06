@@ -11,7 +11,7 @@
 		<header>
 			<nav>
 				<span>
-					<a><span class="nav-left" id="nav-clock"></span></a> <!-- hour/date/location -->
+					<a><span class="nav-left" id="nav-clock"></span></a> <!-- add weather api -->
 				</span>
 				<span class="nav-center">
 					<a id="lovely-style">
@@ -95,6 +95,17 @@
 			<div class="add-container">
 				<input type="text" id="taskInput" placeholder="Write a new task here">
 				<button id="addBtn" class="main-button">Add Task</button>
+			<!--	<input type="text" id="filterSearch" placeholder="Write to filter a task"> -->
+				<div class="filter-wrapper">
+					<button id="filterBtn" class="main-button">
+						<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+							fill="currentColor">
+							<path
+								d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+						</svg>
+					</button>
+					<input type="text" id="filterSearch" class="hidden" placeholder="Write to search tasks...">
+				</div>
 			</div>
 		</header>
 

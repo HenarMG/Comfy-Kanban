@@ -141,9 +141,16 @@ nav {
     padding: 0px 10px;
     margin-bottom: 0.5em;
     opacity: 0.8;
-    position: relative; 
+    position: relative;
 }
-
+/*   
+.nav-left, .nav-right, .nav-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-width: fit-content; 
+}
+*/
 nav span {
     display: flex; 
     align-items: center;
@@ -151,23 +158,22 @@ nav span {
 }
 
 .nav-left {
-    flex: 0 0 auto;
     font-weight:600;
     color: #ee8bf0;
 }
 
-.nav-center {
+.nav-center {    
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
+    flex: 0 0 auto;
     display: flex;
     justify-content: center; 
     gap: 1em; 
 }
 
 .nav-right {
-    flex: 0 0 auto; 
+   flex: 0 0 auto; 
 }
 
 nav a {
@@ -187,6 +193,27 @@ nav img {
     height: 18px;
     width: auto;
     border-radius: 4px;
+}
+
+
+/* SEARCH HIDDEN BUTTON */
+.hidden {
+    display: none !important;
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#filterSearch {
+    padding: 12px 20px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    outline: none;
+    width: 200px;
+    transition: all 0.3s ease;
 }
 
 
@@ -213,6 +240,15 @@ h1 {
     width: 250px;
     transition: border-color 0.3s;
 }
+
+ #filterSearch {
+    padding: 12px 20px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.3s;
+ }
 
 #taskInput:focus {
     border-color: var(--accent-color);
